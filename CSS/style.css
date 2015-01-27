@@ -3,7 +3,7 @@ head{
 }
 body{
 	font-family: 'Bitter', serif;
-	font-size: 12px;
+	font-size: 14px;
 
 }
 div{
@@ -18,9 +18,13 @@ h1{
 
 }
 h2{
-	font-size:14px;
+	font-size:16px;
 
 }
 h3{
+
+}
+a{
+	text-decoration: none;
 
 }
