@@ -17,49 +17,68 @@
 			<a href="index.html"><i class="fa fa-long-arrow-up"></i></a>			
 			<h1 class="head"> Documentation </h1>	
 			<div class="opener navigate">					
-					<a href="documentation.html#NoiseMonitor">| Noise Monitor |</a>
-					<a href="documentation.html#RealTime">| Real Time Accel |</a>
+					<a href="documentation.html#noiseMonitor">| Noise Monitor |</a>
+					<a href="documentation.html#realTime">| Real Time Accel |</a>
+					<a href="documentation.html#snapShot">| Accel Snap Shot |</a>
 			</div>
 
 			<div class ="appSection">
-				<h1 class="appTitle" id = "NoiseMonitor">Noise Monitor</h1>        
+				<h1 class="appTitle" id = "noiseMonitor">Noise Monitor</h1>        
 				<a class="titleIcon" href="https://github.com/MaxHunt/NoiseMonitorPebble"><i class="fa fa-github"></i></a>
 			</div>
 			<img class ="pebble" src="images/NoiseMonitorTitle.jpg" alt="Title Screen for Noise Monitor App">
 			<div class = "details">
-			<h2> Introduction </h2>
-			<p> This application is dedicated to the revaling of the noise levels on your pebbles accelerometer. If you are new to this area of reasearch, you may have not come across the word noise being used in this context before. In a broader sence of the word, means a reduction in clarity. With acoustic noise this is when someone makes and unwanted sound, but the noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measuremnt".
-			</p>
-			<h2> How it works </h2>
-			<p>
-			Now to the innner working. This app measures the acceleromter 25 times and then produces results based on these 25 measurements. This value can be changed in the source code on line 13, if you are intrested in a wider range of values. Once collected, all results are entered into arrays concerning their respective axis, x, y and z. The Min, Max and Average values for each axis is then taken.</p>
-			<p>
-			Noise is calculated via Max - Min in a absolute form, to avoid any dodgy subtraction to do with negative numbers. Each value is ouputed to an end screen you can see in the app, or keep track of in the console.
-			</p>
-			<h2>Known Bugs and Future Improvements</h2>
-			<ul>
-				<li>Multiple instances upon returning to the main app screen, fixed via a focred restart after a measurement has been analysed.</li>
-				<li>Span of data could be imrpoved by taking whole array which is being gerented on each sample.</li>
-			</ul>
+				<h2> Introduction </h2>
+				<p> This application is dedicated to the revaling of the noise levels on your pebbles accelerometer. If you are new to this area of reasearch, you may have not come across the word noise being used in this context before. In a broader sence of the word, means a reduction in clarity. With acoustic noise this is when someone makes and unwanted sound, but the noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measuremnt".
+				</p>
+				<h2> How it works </h2>
+				<p>
+				Now to the innner working. This app measures the acceleromter 25 times and then produces results based on these 25 measurements. This value can be changed in the source code on line 13, if you are intrested in a wider range of values. Once collected, all results are entered into arrays concerning their respective axis, x, y and z. The Min, Max and Average values for each axis is then taken.</p>
+				<p>
+				Noise is calculated via Max - Min in a absolute form, to avoid any dodgy subtraction to do with negative numbers. Each value is ouputed to an end screen you can see in the app, or keep track of in the console.
+				</p>
+				<h2>Known Bugs and Future Improvements</h2>
+				<ul>
+					<li>Multiple instances upon returning to the main app screen, fixed via a focred restart after a measurement has been analysed.</li>
+					<li>Span of data could be imrpoved by taking whole array which is being gerented on each sample.</li>
+				</ul>
 			</div>
 
 			<div class ="appSection">
-				<h1 class="appTitle" id = "RealTime">Real Time Accel</h1>        
+				<h1 class="appTitle" id = "realTime">Real Time Accel</h1>        
 				<a class="titleIcon" href="https://github.com/MaxHunt/Real-Time-Accel-App"><i class="fa fa-github"></i></a>
 			</div>
 			<img class ="pebble" src="images/RealTimeTitleScreen.jpg" alt="Title Screen for Real Time App">
 			<div class = "details">
-			<h2> Introduction </h2>
-			<p>While I realise there are many applications, for the pebble, that do this already, I have decided to mkae my own. This was due to the fact that, as well as for my own progamming benifit, I could not find a simple monitoriting application. Also, most are written in C where as I feel a javascript verison is well nedded. 
-			</p>
-			<h2> How it works </h2>
-			<p> Using pebble.js, once select is pressed, I look for a "Accel.on('data', callback)". These fire continuosly unitl back or select is pressed. Upon this event, I unsubscribe from the data event and return to the main screen.
-			</p>
-			<h2>Known Bugs and Future Improvements</h2>
-			<ul>
-				<li>Problems switching to and from the tracking screen and the main screen can result in a crash or forceing the app back to the tracking screen.</li>
-			</ul>
-			</div> 
+				<h2> Introduction </h2>
+				<p>While I realise there are many applications, for the pebble, that do this already, I have decided to mkae my own. This was due to the fact that, as well as for my own progamming benifit, I could not find a simple monitoriting application. Also, most are written in C where as I feel a javascript verison is well nedded. 
+				</p>
+				<h2> How it works </h2>
+				<p> Using pebble.js, once select is pressed, I look for a "Accel.on('data', callback)". These fire continuosly unitl back or select is pressed. Upon this event, I unsubscribe from the data event and return to the main screen.
+				</p>
+				<h2>Known Bugs and Future Improvements</h2>
+				<ul>
+					<li>Problems switching to and from the tracking screen and the main screen can result in a crash or forceing the app back to the tracking screen.</li>
+				</ul>
+			</div>
+			<div class ="appSection">
+				<h1 class="appTitle" id="snapShot">Accel Snap Shot</h1>        
+				<a class="titleIcon" href="https://github.com/MaxHunt/AccelerometerSnapshotAppPebble"><i class="fa fa-github"></i></a>
+			</div>
+			<img class ="pebble" src="images/snapShotTitleScreen.jpg" alt="Title Screen for Snap Shot App">
+			<div class = "details">
+				<h2> Introduction </h2>
+				<p>Blah blah blah blah Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah  blah blah blahBlah blah blah blahBlah blah blah blah  blah blah blahBlah blah blah blahBlah blah blah blah  blah blah blahBlah blah blah blahBlah blah blah blah  blah blah blahBlah blah blah blahBlah blah blah blah
+				</p>
+				<h2> How it works </h2>
+				<p>Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah
+				</p>
+				<h2>Known Bugs and Future Improvements</h2>
+				<ul>
+					<li>Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah</li>
+					<li>Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah blah blah</li>
+				</ul>
+			</div>  
 			<footer>
 			<div class="picturelinks">
 				<a href="https://github.com/MaxHunt"><i class="fa fa-github"></i></a>
