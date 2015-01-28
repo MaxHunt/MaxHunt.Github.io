@@ -6,7 +6,8 @@ head {
 body {
 	display: inline;
 	font: 14px/1.5 'Bitter', serif;
-	background-color: #FFFFCC;
+	background-color: rgb(240,240,240);
+	/*background-color: #FFFFCC;*/
 	color: #484848;
 
 }
@@ -16,7 +17,8 @@ a{
 	text-decoration: none;
 	display: inline;
 	font-weight: bold;
-	color:#990066;
+	color:#FF9900;
+	/*color:#990066;*/
 }
 
 img {
@@ -27,6 +29,7 @@ img {
 	overflow: hidden;
 	display: inline;
 	text-align: center;
+	border: 2px solid #FF9900;
 }
 
 .picturelinks {
@@ -42,9 +45,16 @@ img {
 }
 
 .container {
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;  
+    border-radius: 20px;
+	overflow: hidden;
+	padding: 25px;
 	max-width: 600px;
 	margin: 20px auto;
 	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .opener {
@@ -60,7 +70,8 @@ h1 {
 	color: #FF9900;
 }
 
-.inline {
+span.inline {
 	font-size: 16px;
 	color: #FF9900;
+	font-weight: bold;
 }
