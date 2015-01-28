@@ -1,29 +1,66 @@
-head{
+head {
+
 
 }
-body{
-	font-family: 'Bitter', serif;
-	font-size: 14px;
+
+body {
+	display: inline;
+	font: 14px/1.5 'Bitter', serif;
+	background-color: #FFFFCC;
+	color: #484848;
 
 }
-div{
-}
-div.opener{
-	font-size:18px;
-}
 
-h1{
-	font-size:20px;
-
-}
-h2{
-	font-size:16px;
-
-}
-h3{
-
-}
 a{
+	font-size: 16px;
 	text-decoration: none;
+	display: inline;
+	font-weight: bold;
+	color:#990066;
+}
 
+img {
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;  
+    border-radius: 20px;
+	overflow: hidden;
+	display: inline;
+	text-align: center;
+}
+
+.picturelinks {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.picturelinks a {
+	color: #FF9900;
+	font-size: 20px;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.container {
+	max-width: 600px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.opener {
+	font-size: 18px;
+	margin: 20px auto;
+	text-align: center;
+	max-width: 800px;
+}
+
+h1 {
+	font-size: 20px;
+	display: inline;
+	color: #FF9900;
+}
+
+.inline {
+	font-size: 16px;
+	color: #FF9900;
 }
