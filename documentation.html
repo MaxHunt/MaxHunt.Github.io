@@ -29,18 +29,18 @@
 			<img class ="pebble" src="images/NoiseMonitorTitle.jpg" alt="Title Screen for Noise Monitor App">
 			<div class = "details">
 				<h2> Introduction </h2>
-				<p> This application is dedicated to the revaling of the noise levels on your pebbles accelerometer. If you are new to this area of reasearch, you may have not come across the word noise being used in this context before. In a broader sence of the word, means a reduction in clarity. With acoustic noise this is when someone makes and unwanted sound, but the noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measuremnt".
+				<p> This application is dedicated to the revealing of the noise levels, on your Pebble’s accelerometer. If you are new to this area of research, you may have not come across the word “noise” being used in this context before. In a broader sense of the word, it means a reduction in clarity. With acoustic noise, this is when someone makes and unwanted sound. The noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measurement".
 				</p>
 				<h2> How it works </h2>
 				<p>
-				Now to the innner working. This app measures the acceleromter 25 times and then produces results based on these 25 measurements. This value can be changed in the source code on line 13, if you are intrested in a wider range of values. Once collected, all results are entered into arrays concerning their respective axis, x, y and z. The Min, Max and Average values for each axis is then taken.</p>
+				Now to the inner workings. This app measures the accelerometer 25 times and then produces results based on these 25 measurements. This value can be changed in the source code on line 13, if you are interested in a wider range of values. Once collected, all results are entered into arrays concerning their respective axis, x, y and z. The min, max and average values for each axis are then taken from these arrays.</p>
 				<p>
-				Noise is calculated via Max - Min in a absolute form, to avoid any dodgy subtraction to do with negative numbers. Each value is ouputed to an end screen you can see in the app, or keep track of in the console.
+				Noise is calculated via Max - Min in an absolute form, to avoid any misleading subtraction to do with negative numbers. Each value is outputted to an end screen you can see in the app, or keep track of in the console.
 				</p>
 				<h2>Known Bugs and Future Improvements</h2>
 				<ul>
-					<li>Multiple instances upon returning to the main app screen, fixed via a focred restart after a measurement has been analysed.</li>
-					<li>Span of data could be imrpoved by taking whole array which is being gerented on each sample.</li>
+					<li>Multiple instances upon returning to the main app screen. This has been temporarily fixed via a forced restart after a measurement has been analysed. </li>
+					<li>Span of data could be improved by using the whole array which is being generated on each data event. </li>
 				</ul>
 			</div>
 
