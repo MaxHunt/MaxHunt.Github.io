@@ -17,24 +17,24 @@
 			<a href="index.html"><i class="fa fa-long-arrow-up"></i></a>			
 			<h1 class="head"> Documentation </h1>	
 			<div class="opener navigate">
-					<a href="documentation.html#wristTwist">| Wrist Twist |</a>			
+					<a href="documentation.html#wristTwist">| WristTwist |</a>			
 					<a href="documentation.html#noiseMonitor">| Noise Monitor |</a>
 					<a href="documentation.html#realTime">| Real Time Accel |</a>
 					<a href="documentation.html#snapShot">| Accel Snap Shot |</a>
 			</div>
 
 			<div class ="appSection">
-				<h1 class="appTitle" id="wristTwist">Wrist Twist</h1>        
+				<h1 class="appTitle" id="wristTwist">WristTwist</h1>        
 				<a class="titleIcon" href="https://github.com/MaxHunt/WristTwistPebbleApp"><i class="fa fa-github"></i></a>
 			</div>
 			<img class ="pebble" src="images/wristTwistTitleScreen.jpg" alt="Title Screen for Wrist Twist App">
 			<div class = "details">
 				<h2> Introduction </h2>
-				<p>Wrist Twist is the first gesture recognition application I am developing for my project. As it states, the gesture to be recognised is the motion of your wrist twisting. Once the application is opened, you come to the start screen. If you then press select, the application is started. A counter is then displayed, starting at zero, and increased by one, every time the gesture is completed. The real time X, Y and Z coordinates are not displayed by can be retrieved in the console print commands. The current level of gesture detection is good, but false positives do remain a problem.</p>
+				<p><em>WristTwist</em> is the first gesture recognition application I am developing for my project. As it states, the gesture to be recognised is the motion of your wrist twisting. Once the application is opened, the start screen appears. If you then press select, the application is started. A counter is then displayed, starting at zero, and increased by one every time the gesture is completed. The real time X, Y and Z coordinates are not displayed by can be retrieved in the console print commands. The current level of gesture detection is good, but false positives do remain a problem.</p>
 
 				<h2> How it works </h2>
 				<p>
-				The application works by first manipulating the arrays. A readout of the accelerometer is made multiple times within the second and then a data event is posted as in the other applications. Wrist Twist then manipulates each array into another Array but this is twice as long due to the method proposed by <em>Jiahui Wu</em> in his paper <a href="http://www.cs.zju.edu.cn/~gpan/publication/2009-UIC-gesture.pdf">"Gesture Recognition with a 3-D Accelerometer," 2009</a>. By using each element twice in the array we can create multiple frames from the single segments of data. Frame n would be made up of segment <em>n</em> and <em>n+1</em>. For example, frame 1 is made up of segment 1 and 2; frame 2 is made up of segment 2 and 3. This allows us to easily compare the previous read out without having to constantly move over the array's computing time and computing power which the pebble lacks. 
+				The application works by first manipulating the arrays. A readout of the accelerometer is made multiple times within the second and then a data event is posted as in the other applications. Wrist Twist then manipulates each array into another Array but this is twice as long due to the method proposed by <em>Jiahui Wu</em> in his paper <a href="http://www.cs.zju.edu.cn/~gpan/publication/2009-UIC-gesture.pdf">"Gesture Recognition with a 3-D Accelerometer," 2009</a>. By using each element twice in the array we can create multiple frames from the single segments of data. Frame n would be made up of segment <em>n</em> and <em>n+1</em>. For example, frame 1 is made up of segment 1 and 2; frame 2 is made up of segment 2 and 3. This allows us to easily compare the previous readout without having to constantly move over the array's computing time and computing power which the pebble lacks. 
 				</p>
 				<p>
 				This method also allows us to compare a gesture as a set of values to the ones detected. A gesture is made up in the same way, but instead of x, y, z values in the frames, they contain the negative or positive differences in relation to the 2 segments in the frame. This allows for violent movement above the stated limit. It also stops the users have to directly copy the movement, as every person will interpret gestures differently.
