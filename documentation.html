@@ -30,19 +30,29 @@
 			<img class ="pebble" src="images/wristTwistTitleScreen.jpg" alt="Title Screen for Wrist Twist App">
 			<div class = "details">
 				<h2> Introduction </h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat efficitur purus, sit amet molestie sapien molestie quis. Fusce vel nunc lorem. Aliquam at nunc tellus. Aliquam faucibus nibh eget ex convallis aliquet. Nulla porta nulla eget mauris ullamcorper, in vulputate massa ornare. Pellentesque in rutrum est, et posuere tellus. Curabitur tristique ullamcorper venenatis. Nam sit amet elit blandit, commodo urna at, efficitur sapien.</p>
+				<p>Wrist Twist is the first gesture recognition application I am developing for my project. As it states, the gesture to be recognised is the motion of your wrist twisting. Once the application is opened, you come to the start screen. If you then press select, the application is started. A counter is then displayed, starting at zero, and increased by one, every time the gesture is completed. The real time X, Y and Z coordinates are not displayed by can be retrieved in the console print commands. The current level of gesture detection is good, but false positives do remain a problem.</p>
 
-				<p>Duis venenatis ex ut felis ultrices hendrerit. Praesent pretium lacinia diam. Etiam libero tortor, pellentesque quis maximus in, semper nec lacus. Vivamus gravida elit pulvinar mauris semper, at hendrerit sem pretium. Nunc sed metus lectus. Proin sed ex lacinia, fringilla enim consectetur, rutrum lorem. Phasellus in hendrerit nulla, et pharetra erat. Nunc vitae tortor elementum, semper nisl posuere, bibendum risus. Quisque non magna enim. In quis lacinia ex.
-				</p>
-				
 				<h2> How it works </h2>
 				<p>
-				Sed varius sapien quis orci aliquet eleifend ac sed urna. Donec in lectus porttitor, vehicula sem at, luctus diam. Praesent faucibus efficitur finibus. Etiam blandit ultricies magna, ut imperdiet augue aliquam quis. Donec vestibulum quis metus et accumsan. Proin turpis ligula, vulputate quis finibus id, convallis sed neque. Vivamus at eros eu eros dignissim sodales. Etiam quis lorem elit. Vivamus quis mauris vel elit pretium volutpat nec nec ligula. Aenean nec placerat ipsum, ac pellentesque metus. Sed quis lorem ut dui consectetur fringilla. Vestibulum consequat vulputate bibendum.
+				The application works by first manipulating the arrays. A readout of the accelerometer is made multiple times within the second and then a data event is posted as in the other applications. Wrist Twist then manipulates each array into another Array but this is twice as long due to the method proposed by <em>Jiahui Wu</em> in his paper <a href="http://www.cs.zju.edu.cn/~gpan/publication/2009-UIC-gesture.pdf">"Gesture Recognition with a 3-D Accelerometer," 2009</a>. By using each element twice in the array we can create multiple frames from the single segments of data. Frame n would be made up of segment <em>n</em> and <em>n+1</em>. For example, frame 1 is made up of segment 1 and 2; frame 2 is made up of segment 2 and 3. This allows us to easily compare the previous read out without having to constantly move over the array's computing time and computing power which the pebble lacks. 
 				</p>
+				<p>
+				This method also allows us to compare a gesture as a set of values to the ones detected. A gesture is made up in the same way, but instead of x, y, z values in the frames, they contain the negative or positive differences in relation to the 2 segments in the frame. This allows for violent movement above the stated limit. It also stops the users have to directly copy the movement, as every person will interpret gestures differently.
+				</p>
+				<p>
+				The comparison algorithm at this stage is very rudimentary and tailored to this gesture. However the basics are there to be modified into a robust, generic algorithm for the next prototype. By comparing each frame at a time, you can then disregard frames quickly if they do not meet the pattern, again saving computing power and time. If a gesture is detected, a timeout is started to stop that same gesture being detected again in that same period. This stops false positive as well as the user trying to violently interact with their watch.
+				</p>
+				<p>
+				Another way false positives are stopped, is by using the vibration field. This is a field, filled out by the pebble, in each segment. The boolean value is set to 1 if, while during that segment, the vibrator is operating. The vibrations hinder the accelerometer and can trick it into thinking it has moved.
+				</p>
+				<p>
+				Once all this has taken place all current arrays are deleted and the process is started again.
+				</p> 
+
 				<h2>Known Bugs and Future Improvements</h2>
 				<ul>
-					<li>Nothing to report, all issues solved so far.</li>
-					
+					<li>False Positives</li>
+					<li>Shaking not diregarded</li>					
 				</ul>
 			</div>
 
@@ -53,7 +63,7 @@
 			<img class ="pebble" src="images/NoiseMonitorTitle.jpg" alt="Title Screen for Noise Monitor App">
 			<div class = "details">
 				<h2> Introduction </h2>
-				<p> This application is dedicated to the revealing of the noise levels, on your Pebble’s accelerometer. If you are new to this area of research, you may have not come across the word “noise” being used in this context before. In a broader sense of the word, it means a reduction in clarity. With acoustic noise, this is when someone makes and unwanted sound. The noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measurement".
+				<p> This application is dedicated to the revealing of the noise levels, on your Pebble's accelerometer. If you are new to this area of research, you may have not come across the word "noise" being used in this context before. In a broader sense of the word, it means a reduction in clarity. With acoustic noise, this is when someone makes and unwanted sound. The noise I am talking about is the "random and persistent disturbance, that obscures or reduces the clarity of a signal or measurement".
 				</p>
 				<h2> How it works </h2>
 				<p>
